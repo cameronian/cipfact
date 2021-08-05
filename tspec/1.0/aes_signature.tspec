@@ -1,0 +1,9 @@
+
+
+spec :aes_signature do
+  field :oid,       :str, Tag.value(:aes_signature)
+  field :version,   :int, 0x0100
+
+  field :digest,    :bin
+  field :hashAlgo,  :int
+end

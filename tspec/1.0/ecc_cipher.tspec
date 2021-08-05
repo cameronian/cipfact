@@ -1,0 +1,11 @@
+
+
+spec :ecc_cipher do
+  field :oid,   :str, Tag.value(:ecc_cipher)
+  field :version,       :int, 0x0100
+
+  field :senderInfo,      :bin
+  field :cipherConfig,    :bin
+  field :kdfConfig,       :bin
+  field_opts :output,     :bin
+end

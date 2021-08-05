@@ -1,0 +1,15 @@
+
+
+spec :rsa_signature do
+
+  field :oid,           :str, Tag.value(:rsa_signature)
+  field :version,       :int, 0x0100
+
+  field :signerInfo,    :bin
+  field :signature,     :bin
+  field :mode,          :int
+  field :signHash,      :int
+  ofield :saltLength,   :int
+  ofield :mgf1Hash,     :int
+
+end

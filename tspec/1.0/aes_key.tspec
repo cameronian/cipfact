@@ -1,0 +1,9 @@
+
+
+spec :aes_key do
+  field :oid, :str, Tag.value(:aes_key)
+  field :version, :int, 0x0100
+
+  field :keysize, :int
+  field :value,   :bin
+end

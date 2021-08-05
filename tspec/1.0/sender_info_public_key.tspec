@@ -1,0 +1,10 @@
+
+
+spec :sender_info_public_key do
+  field :oid,     :str, Tag.value(:sender_info_public_key)
+  field :version, :int, 0x0100
+
+  field       :algo,    :int
+  field       :value,   :bin
+  field_opts  :ref,     :str
+end

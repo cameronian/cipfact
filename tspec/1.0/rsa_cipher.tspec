@@ -1,0 +1,9 @@
+
+
+spec :rsa_cipher do
+  field :oid,   :str, Tag.value(:rsa_cipher)
+  field :version,       :int, 0x0100
+
+  field :padding,       :int
+  field :output,        :bin
+end

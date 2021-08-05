@@ -1,0 +1,13 @@
+
+
+spec :kdf_scrypt do
+  field :oid,         :str, Tag.value(:kdf_scrypt)
+  field :version,     :int, 0x0100
+
+  field :output,      :bin
+  field :salt,        :bin
+  field :cost,        :int
+  field :blockSize,   :int
+  field :parallel,    :int
+  field :outLenBytes, :int
+end
