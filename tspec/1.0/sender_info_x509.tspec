@@ -1,7 +1,7 @@
 
 
 spec :sender_info_x509 do
-  field :oid,     :str, Tag.value(:sender_info_x509)
+  field :oid,     :oid, Tag.value(:sender_info_x509)
   field :version, :int, 0x0100
 
   field :value,   :bin

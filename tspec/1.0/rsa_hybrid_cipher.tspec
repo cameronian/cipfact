@@ -1,7 +1,7 @@
 
 
 spec :rsa_hybrid_cipher do
-  field :oid,   :str, Tag.value(:rsa_hybrid_cipher)
+  field :oid,   :oid, Tag.value(:rsa_hybrid_cipher)
   field :version,       :int, 0x0100
 
   field :cipherConfig,  :bin

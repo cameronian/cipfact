@@ -2,7 +2,7 @@
 
 spec :rsa_signature do
 
-  field :oid,           :str, Tag.value(:rsa_signature)
+  field :oid,           :oid, Tag.value(:rsa_signature)
   field :version,       :int, 0x0100
 
   field :signerInfo,    :bin

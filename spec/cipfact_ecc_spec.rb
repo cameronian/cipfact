@@ -61,23 +61,6 @@ RSpec.describe "Cipfact ECC" do
     end
     p plain.join
 
-    #expect {
-    #  c.decrypt(enc,kp) do |ops|
-    #    case ops
-    #    when :padding
-    #      :pkcs1
-    #    end
-    #  end
-    #}.to raise_exception(Cipfact::CipherError)
-
-    #dec = c.decrypt(enc,kp) do |ops|
-    #  case ops
-    #  when :padding
-    #    :no_padding
-    #  end
-    #end
-    #expect(dec == data).to be false
-
   end
 
 

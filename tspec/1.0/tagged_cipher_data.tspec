@@ -1,0 +1,8 @@
+
+spec :tagged_cipher_data do
+  field :oid,       :oid,  Tag.value(:tagged_cipher_data)
+  field :version,   :int,  0x0100
+
+  field :uuid,      :str
+  field :length,    :int
+end

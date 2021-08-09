@@ -1,0 +1,19 @@
+
+# 
+# this structure shall be encrypted
+#
+
+spec :tagged_cipher_header_recp_envp do
+  field :oid,       :oid,  Tag.value(:tagged_cipher_header_recp_envp)
+  field :version,   :int,  0x0100
+
+  field :cipher_key,        :bin
+  field :cipher_context,    :bin
+  field :signing_key,       :bin
+  #field :plain_signature,   :bin
+  field :cipher_signature,  :bin
+
+  field :recp_id,           :str
+  field :cipher_id,         :str
+
+end

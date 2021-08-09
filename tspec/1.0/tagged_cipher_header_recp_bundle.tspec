@@ -1,0 +1,9 @@
+
+spec :tagged_cipher_header_recp_bundle do
+  field :oid,       :oid,  Tag.value(:tagged_cipher_header_recp_bundle)
+  field :version,   :int,  0x0100
+
+  field :recipient, :bin  # recipient structure
+  field :bundle_signature, :bin
+
+end

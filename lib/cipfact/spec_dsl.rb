@@ -31,6 +31,7 @@ module Cipfact
   module SpecDsl
     include ToolRack::ConditionUtils
 
+    attr_reader :id
     def initialize
       @field_seq = []
       @logger = SpecDslConfig.instance.logger

@@ -8,7 +8,17 @@ module Cipfact
       raise Error, "Provider cannot be nil" if is_empty?(prov)
       raise Error, "Provider must have provider_name() method" if not prov.respond_to?(:provider_name)
 
-      providers[prov.provider_name] = prov
+      pname = prov.provider_name
+      if pname.is_a?(Array)
+        pname.each do |pn|
+          prov = providers[pn]
+          raise Error, "Provider name '#{pn}' already taken and assigned to #{prov.class}" if not_empty?(prov)
+          providers[pn] = prov
+        end
+      else
+        providers[pname] = prov
+      end
+
     end
 
     def self.instance(key)

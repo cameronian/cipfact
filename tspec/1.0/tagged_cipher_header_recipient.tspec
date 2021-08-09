@@ -1,0 +1,9 @@
+
+spec :tagged_cipher_header_recipient do
+  field :oid,       :oid,  Tag.value(:tagged_cipher_header_recipient)
+  field :version,   :int,  0x0100
+
+  field :recp_id,   :str
+  field :recp_envp, :bin  
+
+end

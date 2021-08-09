@@ -1,7 +1,7 @@
 
 
 spec :aes_cipher_config do
-  field :oid, :str, Tag.value(:aes_cipher_config)
+  field :oid, :oid, Tag.value(:aes_cipher_config)
   field :version, :int, 0x0100
 
   field :iv,      :bin

@@ -137,6 +137,18 @@ Tag.new do
       end
     end
 
+    parent(:tagged, "#parent.5", "Tagged custom structure") do
+      parent(:tagged_cipher, "#parent.1", "Full cipher header + data") do
+        parent(:tagged_cipher_header, "#parent.1", "Cipher header") do
+          parent(:tagged_cipher_header_recipient, "#parent.1", "Cipher header recipient") do
+            register(:tagged_cipher_header_recp_envp, "#parent.1", "Cipher header recipient envelope content")
+            register(:tagged_cipher_header_recp_bundle, "#parent.2", "Cipher header recipient bundle. Recipient envp + signature")
+          end
+        end
+        register(:tagged_cipher_data, "#parent.2", "Cipher output data")
+      end
+    end
+
   end 
 
 end
